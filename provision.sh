@@ -33,7 +33,7 @@ echo "Downloading spf13-vim"
 git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
 
 echo "Installing spf13-vim"
-cp /vagrant/config/vim/.vimrc.local $HOME/.vimrc.local
+ln -s /vagrant/config/vim/.vimrc.local $HOME/.vimrc.local
 sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
 
 # fix vim colors inside tmux
