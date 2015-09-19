@@ -1,9 +1,28 @@
 #!/bin/bash
-echo "Updating Apt-Get"
-sudo apt-get update &> /dev/null 2>&1
 
-echo "Installing Required Packages"
-sudo apt-get install -y --fix-missing \
+lnif(){
+  if[ -e "$1" ]; then
+    ln -sf "$1" "$2"
+  fi
+}
+
+msg() {
+    printf '%b\n' "$1" >&2
+}
+
+success() {
+    if [ "$ret" -eq '0' ]; then
+        msg "\33[32m[✔]\33[0m ${1}${2}"
+    fi
+}
+
+update_packages(){
+  sudo apt-get update &> /dev/null 2>&1
+  success "Updated apt-get"
+}
+
+install_required_packages(){
+  sudo apt-get install -y --fix-missing \
   man \
   tmux \
   vim \
@@ -11,24 +30,30 @@ sudo apt-get install -y --fix-missing \
   git \
   zsh \
   curl &> /dev/null 2>&1
+  success "Installed Required Packages"
+}
 
-echo "Downloading and installing Oh My Zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &> /dev/null 2>&1
+install_ohmyzsh(){
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &> /dev/null 2>&1
+  success "Installed Oh-my-zsh"
 # sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="pygmalion"/g' ~/.zshrc
+}
 
-echo "Downloading spf13-vim"
-git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
+install_spf13(){
+  git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
+  lnif /vagrant/config/vim/.vimrc.local $HOME/.vimrc.local
+  lnif /vagrant/config/vim/.vimrc.bundles.local $HOME/.vimrc.bundles.local
+  sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
+  rm -rf $HOME/spf13-vim
+  success "Install spf13-vim"
+}
 
-echo "Installing spf13-vim"
-ln -s /vagrant/config/vim/.vimrc.local $HOME/.vimrc.local
-ln -s /vagrant/config/vim/.vimrc.bundles.local $HOME/.vimrc.bundles.local
-sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
-rm -rf $HOME/spf13-vim
+update_package 
+install_required_packages
+install_ohmyzsh
+install_spf13
 
-# fix vim colors inside tmux
 echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
-
 sudo chsh -s $(which zsh) vagrant
-# vim +BundleInstall! +BundleClean! +q!
 
-echo "Minimal Setup Done. Execute /vagrant/extra.sh to install the rest of the packages."
+success "Minimal Setup Done. Execute /vagrant/extra.sh to install the rest of the packages."
