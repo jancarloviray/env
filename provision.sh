@@ -37,15 +37,14 @@ echo "Downloading spf13-vim"
 git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
 
 echo "Installing spf13-vim"
+cp /vagrant/config/vim/.vimrc.local $HOME/.vimrc.local
 sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
 
 # fix vim colors inside tmux
-echo 'export TERM="xterm-256color"' >> ~/.zshrc
-echo 'export TERM="xterm-256color"' >> ~/.bashrc
+echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
+echo 'export TERM="xterm-256color"' >> $HOME/.bashrc
 
 sudo chsh -s $(which zsh) vagrant
-
-source ~/.bashrc
-source ~/.zshrc
+vim +BundleInstall! +BundleClean! +q!
 
 echo "Done"
