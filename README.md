@@ -14,3 +14,15 @@ Super environment provisioned by Vagrantfile. Contains docker, spf13-vim, ohmyzs
 ## Notes
 
 Note that `./data` is shared and is required.
+
+To change between solarized light and dark theme, you must first change the terminal theme, then do a `:set background=light` or `:set background=dark` within Vim.
+
+## Ideal Configuration
+
+Vim:
+	- set background=dark
+
+iTerm2:
+	- (font: Andale Mono, anti-aliased, 13, vertical lineheight 1.3)
+	- font: Meslo M DZ Regular for Powerline, 14, lineheight 1.0 (more standard)
+	- colorscheme: solarized (dark or light) that is synced with vim color

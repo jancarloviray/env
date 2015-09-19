@@ -1,0 +1,15 @@
+Bundle 'mxw/vim-jsx'
+Bundle 'haya14busa/incsearch.vim'
+UnBundle 'nathanaelkane/vim-indent-guides'
+
+" set right encoding to prevent strange chars
+set encoding=utf-8
+set fileencodings=utf-8
+scriptencoding utf-8
+
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+
+set nocursorline
+set nofoldenable
+set background=light
