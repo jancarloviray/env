@@ -2,9 +2,6 @@
 echo "Updating Apt-Get"
 sudo apt-get update &> /dev/null 2>&1
 
-echo "Upgrading Current Packages"
-# sudo apt-get upgrade -y
-
 echo "Installing Required Packages"
 sudo apt-get install -y --fix-missing \
   man \
