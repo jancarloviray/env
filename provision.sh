@@ -7,13 +7,11 @@ lnif(){
 }
 
 msg() {
-    printf '%b\n' "$1" >&2
+  printf '%b\n' "$1" >&2
 }
 
 success() {
-    if [ "$ret" -eq '0' ]; then
-        msg "\33[32m[✔]\33[0m ${1}${2}"
-    fi
+  msg "\33[32m[✔]\33[0m ${1}${2}"
 }
 
 update_packages(){
@@ -41,8 +39,8 @@ install_ohmyzsh(){
 
 install_spf13(){
   git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
-  lnif /vagrant/config/vim/.vimrc.local $HOME/.vimrc.local
-  lnif /vagrant/config/vim/.vimrc.bundles.local $HOME/.vimrc.bundles.local
+  lnif "/vagrant/config/vim/.vimrc.local" "$HOME/.vimrc.local"
+  lnif "/vagrant/config/vim/.vimrc.bundles.local" "$HOME/.vimrc.bundles.local"
   sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
   rm -rf $HOME/spf13-vim
   success "Install spf13-vim"
@@ -56,4 +54,5 @@ install_spf13
 echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
 sudo chsh -s $(which zsh) vagrant
 
-success "Minimal Setup Done. Execute /vagrant/extra.sh to install the rest of the packages."
+success "Minimal Setup Done."
+msg "Execute /vagrant/extra.sh to install the rest of the packages."
