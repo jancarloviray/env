@@ -1,4 +1,4 @@
-# env
+# vm
 
 Super environment provisioned by Vagrantfile. Contains docker, spf13-vim, ohmyzsh.
 
@@ -16,6 +16,11 @@ Super environment provisioned by Vagrantfile. Contains docker, spf13-vim, ohmyzs
 Note that `./data` is shared and is required.
 
 To change between solarized light and dark theme, you must first change the terminal theme, then do a `:set background=light` or `:set background=dark` within Vim.
+
+## Roadmap
+
+- separate between minimal vs complete for slow or low-bandwidth environments
+- cache some setups such as vim, with option to update to latest
 
 ## Ideal Configuration
 
