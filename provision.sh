@@ -43,8 +43,9 @@ sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
 echo 'export TERM="xterm-256color"' >> ~/.zshrc
 echo 'export TERM="xterm-256color"' >> ~/.bashrc
 
+sudo chsh -s $(which zsh) vagrant
+
 source ~/.bashrc
 source ~/.zshrc
-chsh -s $(which zsh)
 
 echo "Done"
