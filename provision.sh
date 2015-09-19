@@ -31,7 +31,7 @@ curl -sSL https://get.docker.com/ | sh > /dev/null 2>&1
 
 echo "Downloading and installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &> /dev/null 2>&1
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="wezm"/g' ~/.zshrc
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="pygmalion"/g' ~/.zshrc
 
 echo "Downloading spf13-vim"
 git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
