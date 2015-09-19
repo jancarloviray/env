@@ -11,6 +11,7 @@ sudo apt-get install -y --fix-missing \
   cmake \
   tmux \
   wget \
+  vim \
   vim-nox \
   supervisor \
   linux-image-generic-lts-trusty \
