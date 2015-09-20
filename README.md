@@ -1,12 +1,12 @@
 # vm
 
-Automate and synchronize your dev environment. OS agnostic and powered with spf13-vim and ohmyzsh.
+Automate and synchronize your dev environment. OS agnostic and powered with spf13-vim and ohmyzsh. Quick and simple to set up. OSX, Windows, Linux compatible.
 
 ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-cli.png)
 
 ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-vim.png)
 
-## Requirements
+## Installation
 
 - Install [Vagrant](https://www.vagrantup.com/)
 
@@ -23,6 +23,8 @@ vagrant ssh
 - The themes require powerline-compatible fonts. Install **fonts** located at `/your/path/config/fonts` to your machine, or go to [https://github.com/powerline/fonts](https://github.com/powerline/fonts) for additional compatible fonts. Set those fonts as your terminal default font.
 
 - Change your Terminal colorscheme to **solarized**. iTerm2 colors are located in `/your/path/config/iterm2-colors`.
+
+- Machone's default private network: 192.168.33.10.
 
 ## Notes
 
