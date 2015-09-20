@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set -e
 
 # Use colors, but only if connected to a terminal, and that terminal
@@ -59,6 +61,8 @@ if [ "$(expr "$SHELL" : '.*/\(.*\)')" != "zsh" ]; then
     printf "${BLUE}Please manually change your default shell to zsh!${NORMAL}\n"
   fi
 fi
+
+env zsh
 
 # add a function path
 fpath=($ZSH/functions $ZSH/completions $fpath)
