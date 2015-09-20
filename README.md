@@ -1,33 +1,38 @@
 # vm
 
-Super environment provisioned by Vagrantfile. Contains docker, spf13-vim, ohmyzsh.
+Automate and synchronize your dev environment. OS agnostic and powered with spf13-vim and ohmyzsh.
 
 ## Requirements
 
 - Install [Vagrant](https://www.vagrantup.com/)
 
-## Instructions
+- Run the following commands:
 
-- just run `vagrant up` and it will install.
-- now you can `vagrant ssh` to the box.
+```shell
+mkdir -p /your/path
+cd /your/path
+git clone git@github.com:jancarloviray/vm.git .
+vagrant up
+vagrant ssh
+```
+
+- The themes require powerline-compatible fonts. Install **fonts** located at `/your/path/config/fonts` to your machine, or go to [https://github.com/powerline/fonts](https://github.com/powerline/fonts) for additional compatible fonts. Set those fonts as your terminal default font.
+
+- Change your Terminal colorscheme to **solarized**. iTerm2 colors are located in `/your/path/config/iterm2-colors`.
 
 ## Notes
 
-Note that `./data` is shared and is required.
+Note that `./data` is shared and is required to exist. 
 
-To change between solarized light and dark theme, you must first change the terminal theme, then do a `:set background=light` or `:set background=dark` within Vim.
+*I highly suggest to not work on `/vagrant_data/` since Virtual Box vboxsf is very slow. I would just use that folder as one-off sharing folder, or to copy source code from*
 
 ## Roadmap
 
 - separate between minimal vs complete for slow or low-bandwidth environments
 - cache some setups such as vim, with option to update to latest
 
-## Ideal Configuration
+## Credits
 
-Vim:
-	- set background=dark
+This consumed time, sweat and tears. Please *star* and *fork* this to show support. Thank you.
 
-iTerm2:
-	- (font: Andale Mono, anti-aliased, 13, vertical lineheight 1.3)
-	- font: Meslo M DZ Regular for Powerline, 14, lineheight 1.0 (more standard)
-	- colorscheme: solarized (dark or light) that is synced with vim color
+[Jan Carlo Viray](http://www.jancarloviray.com)
