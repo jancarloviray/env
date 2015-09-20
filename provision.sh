@@ -35,9 +35,11 @@ local_ohmyzsh(){
   rm -rf .oh-my-zsh && \
   cp -R "/vagrant/backup/oh-my-zsh" "$HOME/" && \
   mv oh-my-zsh .oh-my-zsh && \
-  sh "/vagrant/tools/install_ohmyzsh.sh" && \
+  sh "/vagrant/tools/install_ohmyzsh.sh"
+
   sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' $HOME/.zshrc && \
   echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
+  
   success "Installed Oh-my-zsh"
 }
 
