@@ -2,7 +2,9 @@
 
 Automate and synchronize your dev environment. OS agnostic and powered with spf13-vim and ohmyzsh.
 
-![](https://raw.githubusercontent.com/jancarloviray/vm/master/preview.png)
+![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-cli.png)
+
+![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-vim.png)
 
 ## Requirements
 
