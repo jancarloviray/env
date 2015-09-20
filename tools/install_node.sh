@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 echo "Updating Apt-Get"
 sudo apt-get update
 
