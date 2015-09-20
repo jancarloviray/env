@@ -22,6 +22,7 @@ update_packages(){
 # man, tmux, vim-nox
 install_required_packages(){
   sudo apt-get install -y --fix-missing \
+  silversearcher-ag \
   vim \
   vim-nox \
   git \
