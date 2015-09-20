@@ -9,7 +9,7 @@ map ? <Plug>(incsearch-backward)
 set nocursorline
 set nofoldenable
 
-set background=light
+set background=dark
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="normal"
