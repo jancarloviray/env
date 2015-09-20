@@ -31,14 +31,6 @@ install_required_packages(){
   success "Installed Required Packages"
 }
 
-# install_ohmyzsh(){
-#   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &> /dev/null 2>&1
-#   cp -R "/vagrant/config/oh-my-zsh/custom" "$HOME/.oh-my-zsh"
-#   sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' ~/.zshrc
-#   echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
-#   success "Installed Oh-my-zsh"
-# }
-
 local_ohmyzsh(){
   rm -rf .oh-my-zsh
   mkdir $HOME/.oh-my-zsh
@@ -50,37 +42,15 @@ local_ohmyzsh(){
   success "Installed Oh-my-zsh"
 }
 
-copy_vim_local_config(){
-  cp "/vagrant/config/vim/.vimrc.before.fork" "$HOME/.vimrc.before.fork" && \
-  cp "/vagrant/config/vim/.vimrc.bundles.local" "$HOME/.vimrc.bundles.local" && \
-  cp "/vagrant/config/vim/.vimrc.local" "$HOME/.vimrc.local"
-}
-
-install_spf13_web(){
-  git clone https://github.com/spf13/spf13-vim &> /dev/null 2>&1
-  copy_vim_local_config
-  sh spf13-vim/bootstrap.sh &> /dev/null 2>&1
-  rm -rf $HOME/spf13-vim
-  success "Installed spf13-vim"
-}
-
-install_spf13_local(){
-  cp -R "/vagrant/config/vim/.spf13-vim-3" "$HOME/.spf13-vim-3"
-  cp -R "/vagrant/config/vim/.vim" "$HOME/.vim"
-  cp "/vagrant/config/vim/.vimrc" "$HOME/.vimrc"
-  cp "/vagrant/config/vim/.vimrc.bundles" "$HOME/.vimrc.bundles"
-  cp "/vagrant/config/vim/.vimrc.before" "$HOME/.vimrc.before"
-  copy_vim_local_config
-  success "Installed spf13-vim"
+local_spf13(){
+  sh "/vagrant/tools/install_spf13.sh"
+  success "Installed spf13"
 }
 
 update_packages
 install_required_packages
-# install_ohmyzsh
-# install_spf13_local
-# install_spf13_web
-
 local_ohmyzsh
+local_spf13
 
 echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
 sudo chsh -s $(which zsh) vagrant
