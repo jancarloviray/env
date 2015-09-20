@@ -31,15 +31,16 @@ install_required_packages(){
   success "Installed Required Packages"
 }
 
-install_ohmyzsh(){
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &> /dev/null 2>&1
-  cp -R "/vagrant/config/oh-my-zsh/custom" "$HOME/.oh-my-zsh"
-  sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' ~/.zshrc
-  echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
-  success "Installed Oh-my-zsh"
-}
+# install_ohmyzsh(){
+#   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &> /dev/null 2>&1
+#   cp -R "/vagrant/config/oh-my-zsh/custom" "$HOME/.oh-my-zsh"
+#   sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' ~/.zshrc
+#   echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
+#   success "Installed Oh-my-zsh"
+# }
 
 local_ohmyzsh(){
+  rm -rf .oh-my-zsh
   mkdir $HOME/.oh-my-zsh
   cp -R "/vagrant/backup/oh-my-zsh" "$HOME/"
   mv oh-my-zsh .oh-my-zsh
