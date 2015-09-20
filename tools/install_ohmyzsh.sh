@@ -29,12 +29,6 @@ if [ ! -n "$ZSH" ]; then
   ZSH=~/.oh-my-zsh
 fi
 
-if [ -d "$ZSH" ]; then
-  printf "${YELLOW}You already have Oh My Zsh installed.${NORMAL}\n"
-  printf "You'll need to remove $ZSH if you want to re-install.\n"
-  exit
-fi
-
 printf "${BLUE}Looking for an existing zsh config...${NORMAL}\n"
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
   printf "${YELLOW}Found ~/.zshrc.${NORMAL} ${GREEN}Backing up to ~/.zshrc.pre-oh-my-zsh${NORMAL}\n";
