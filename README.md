@@ -24,7 +24,7 @@ vagrant ssh
 
 - Change your Terminal colorscheme to **solarized**. iTerm2 colors are located in `/your/path/config/iterm2-colors`.
 
-- Machone's default private network: 192.168.33.10.
+- Machine's default private network: **192.168.33.10**. Just modify this line `config.vm.network "private_network", ip: "192.168.33.10"` located at `Vagrantfile` to change.
 
 ## Notes
 
