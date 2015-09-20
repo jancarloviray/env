@@ -2,6 +2,8 @@
 
 Automate and synchronize your dev environment. OS agnostic and powered with spf13-vim and ohmyzsh.
 
+![](https://raw.githubusercontent.com/jancarloviray/vm/master/preview.png)
+
 ## Requirements
 
 - Install [Vagrant](https://www.vagrantup.com/)
