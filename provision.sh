@@ -73,8 +73,8 @@ install_spf13_local(){
 update_packages
 install_required_packages
 install_ohmyzsh
-# install_spf13_local
-install_spf13_web
+install_spf13_local
+# install_spf13_web
 
 echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
 sudo chsh -s $(which zsh) vagrant
