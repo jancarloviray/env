@@ -39,7 +39,6 @@ local_ohmyzsh(){
 
   sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' $HOME/.zshrc && \
   echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
-  
   success "Installed Oh-my-zsh"
 }
 
@@ -48,6 +47,7 @@ local_tmux(){
   mv tmux .tmux && \
   cp "/vagrant/config/tmux/.tmux.conf" "$HOME/.tmux.conf"
   tmux source-file $HOME/.tmux.conf
+  success "Finished tmux setup"
 }
 
 local_spf13(){

@@ -64,6 +64,8 @@ mv -f ~/.zshrc-omztemp ~/.zshrc
 
 env zsh
 
+sudo chsh -s $(which zsh) vagrant
+
 # add a function path
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
