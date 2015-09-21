@@ -13,16 +13,18 @@ Automate and synchronize your dev environment. OS agnostic and powered with spf1
 - Run the following commands:
 
 ```shell
-mkdir -p /your/path
-cd /your/path
+mkdir -p $HOME/vm
+cd $HOME/vm
+# update and sync vbguest additions
+vagrant plugin install vagrant-vbguest
 git clone git@github.com:jancarloviray/vm.git .
 vagrant up
 vagrant ssh
 ```
 
-- The themes require powerline-compatible fonts. Install **fonts** located at `/your/path/config/fonts` to your machine, or go to [https://github.com/powerline/fonts](https://github.com/powerline/fonts) for additional compatible fonts. Set those fonts as your terminal default font.
+- The themes require powerline-compatible fonts. Install **fonts** located at `$HOME/config/fonts` to your machine, or go to [https://github.com/powerline/fonts](https://github.com/powerline/fonts) for additional compatible fonts. Set those fonts as your terminal default font.
 
-- Change your Terminal colorscheme to **solarized**. iTerm2 colors are located in `/your/path/config/iterm2-colors`.
+- Change your Terminal colorscheme to **solarized**. iTerm2 colors are located in `$HOME/config/iterm2-colors`.
 
 - Machine's default private network: **192.168.33.10**. Just modify this line `config.vm.network "private_network", ip: "192.168.33.10"` located at `Vagrantfile` to change.
 
