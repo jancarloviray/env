@@ -43,6 +43,13 @@ local_ohmyzsh(){
   success "Installed Oh-my-zsh"
 }
 
+local_tmux(){
+  cp -R "/vagrant/backup/tmux" "$HOME/" && \
+  mv tmux .tmux && \
+  cp "/vagrant/config/tmux/.tmux.conf" "$HOME/.tmux.conf"
+  tmux source-file $HOME/.tmux.conf
+}
+
 local_spf13(){
   sh "/vagrant/tools/install_spf13.sh"
   success "Installed spf13"
@@ -52,6 +59,7 @@ update_packages
 install_required_packages
 local_ohmyzsh
 local_spf13
+local_tmux
 
 echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
 sudo chsh -s $(which zsh) vagrant
