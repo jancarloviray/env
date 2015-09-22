@@ -2,9 +2,9 @@
 
 Tired of configuring and reconfiguring your machine everytime you get a new one!? **Well, I am.** With [Vagrant](https://www.vagrantup.com/) and [jancarloviray/vm](https://github.com/jancarloviray/vm), you will always have the same amazing development environment anywhere you go. Includes a **pimped up vim** and a shell so superior, you'll be saying **oh my zsh!** *Two-way syncing is enabled by default, so you can now sync between the host and the guest environment! Just add your files to `./data`.* What more can you ask? Thanks to Vagrant, this is OS-agnostic! **Now you will never have an excuse to buy that shiny new Mac Apple releases every year!**
 
-![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-cli.png)
+<!-- ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-cli.png) -->
 
-![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-vim.png)
+<!-- ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-vim.png) -->
 
 ## Installation
 
@@ -30,7 +30,7 @@ vagrant ssh
 
 ## Notes
 
-Note that `./data` is shared and is required to exist. 
+Note that `./data` is shared and is required to exist.
 
 *I highly suggest to not work on `/vagrant_data/` since Virtual Box vboxsf is very slow. I would just use that folder as one-off sharing folder, or to copy source code from*
 

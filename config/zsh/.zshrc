@@ -6,7 +6,8 @@ export ZSH=/home/vagrant/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="bullet-train-oh-my-zsh-theme/bullet-train"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="pure"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,11 +89,11 @@ fi
 # BULLETTRAIN_TIME_12HR=true
 # BULLETTRAIN_IS_SSH_CLIENT=true
 # BULLETTRAIN_STATUS_EXIT_SHOW=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+# POWERLEVEL9K_DISABLE_RPROMPT=true
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+# POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(longstatus)
 # POWERLEVEL9K_COLOR_SCHEME='light'
 # POWERLEVEL9K_HIDE_BRANCH_ICON=true
