@@ -32,15 +32,12 @@ install_required_packages(){
 }
 
 local_ohmyzsh(){
+  sudo chsh -s $(which zsh) vagrant
   rm -rf .oh-my-zsh && \
   cp -R "/vagrant/backup/oh-my-zsh" "$HOME/" && \
   mv oh-my-zsh .oh-my-zsh && \
   sh "/vagrant/tools/install_ohmyzsh.sh"
   cp "/vagrant/config/zsh/.zshrc" "$HOME/.zshrc"
-
-  # sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' $HOME/.zshrc && \
-  # echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
-  # echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
   success "Installed Oh-my-zsh"
 }
 
@@ -48,7 +45,6 @@ local_tmux(){
   cp -R "/vagrant/backup/tmux" "$HOME/" && \
   mv tmux .tmux && \
   cp "/vagrant/config/tmux/.tmux.conf" "$HOME/.tmux.conf"
-  tmux source-file $HOME/.tmux.conf
   success "Finished tmux setup"
 }
 

@@ -7,7 +7,7 @@ export ZSH=/home/vagrant/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="bullet-train-oh-my-zsh-theme/bullet-train"
 # ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="pure"
+ZSH_THEME="pure/pure"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
