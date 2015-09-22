@@ -1,6 +1,6 @@
 # vm
 
-Tired of configuring and reconfiguring your machine everytime you get a new one? With [Vagrant](https://www.vagrantup.com/) and [jancarloviray/vm](https://github.com/jancarloviray/vm), you will always have the same amazing development environment anywhere you go. Includes a *pimped up* vim and a shell so superior, you'll be saying *oh my zsh*. Two-way syncing is enabled by default, so you can now sync between the host and the guest environment! Just add your files to `./data`. What more can you ask? Thanks to Vagrant, this is OS-agnostic!
+Tired of configuring and reconfiguring your machine everytime you get a new one? With [Vagrant](https://www.vagrantup.com/) and [jancarloviray/vm](https://github.com/jancarloviray/vm), you will always have the same amazing development environment anywhere you go. Includes a **pimped up vim** and a shell so superior, you'll be saying **oh my zsh!** *Two-way syncing is enabled by default, so you can now sync between the host and the guest environment! Just add your files to `./data`.* What more can you ask? Thanks to Vagrant, this is OS-agnostic!
 
 ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-cli.png)
 
