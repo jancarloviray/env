@@ -43,4 +43,8 @@ Note that `./data` is shared and is required to exist.
 
 This consumed time, sweat and tears. Please *star* and *fork* this to show support. Thank you.
 
+Thank you [spf13](https://github.com/spf13/spf13-vim) for the amazing VIM distribution.
+
+Thank you [ohmyzsh](https://github.com/robbyrussell/oh-my-zsh) for the ultimate ZSH framework.
+
 [Jan Carlo Viray](http://www.jancarloviray.com)
