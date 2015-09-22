@@ -36,9 +36,11 @@ local_ohmyzsh(){
   cp -R "/vagrant/backup/oh-my-zsh" "$HOME/" && \
   mv oh-my-zsh .oh-my-zsh && \
   sh "/vagrant/tools/install_ohmyzsh.sh"
+  cp "/vagrant/config/zsh/.zshrc" "$HOME/.zshrc"
 
-  sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' $HOME/.zshrc && \
-  echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
+  # sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel9k\/powerlevel9k"/g' $HOME/.zshrc && \
+  # echo 'POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv virtualenv vcs)' >> $HOME/.zshrc
+  # echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
   success "Installed Oh-my-zsh"
 }
 
@@ -61,7 +63,6 @@ local_ohmyzsh
 local_spf13
 local_tmux
 
-echo 'export TERM="xterm-256color"' >> $HOME/.zshrc
 sudo chsh -s $(which zsh) vagrant
 
 success "Minimal Setup Done. Run /vagrant/tools/install_*.sh for extra pachages."
