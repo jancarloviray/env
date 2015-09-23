@@ -6,7 +6,7 @@ Tired of configuring and reconfiguring your machine everytime you get a new one!
 
 <!-- ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-vim.png) -->
 
-<a href="https://asciinema.org/a/6b1efrup0nl5pwtvrylzznyvh" target="_blank"><img src="https://asciinema.org/a/6b1efrup0nl5pwtvrylzznyvh.png" width="590"/></a>
+<script type="text/javascript" src="https://asciinema.org/a/6b1efrup0nl5pwtvrylzznyvh.js" id="asciicast-6b1efrup0nl5pwtvrylzznyvh" async></script>
 
 ## Installation
 
