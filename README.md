@@ -6,6 +6,8 @@ Tired of configuring and reconfiguring your machine everytime you get a new one!
 
 <!-- ![](https://raw.githubusercontent.com/jancarloviray/vm/master/img-vim.png) -->
 
+[![asciicast](https://asciinema.org/a/6b1efrup0nl5pwtvrylzznyvh.png)](https://asciinema.org/a/6b1efrup0nl5pwtvrylzznyvh)
+
 ## Installation
 
 - Install [Vagrant](https://www.vagrantup.com/)
